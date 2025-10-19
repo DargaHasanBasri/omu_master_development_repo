@@ -2,4 +2,7 @@
 <resources>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="ebonyClay">#25243c</color>
+    <color name="tuna">#333151</color>
+    <color name="toolbox">#846cb6</color>
 </resources>

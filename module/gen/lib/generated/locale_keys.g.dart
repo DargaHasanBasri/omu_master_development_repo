@@ -4,5 +4,10 @@
 
 abstract class  LocaleKeys {
   static const appName = 'appName';
+  static const buttonTitle_start = 'buttonTitle.start';
+  static const buttonTitle = 'buttonTitle';
+  static const homeScreen_placement = 'homeScreen.placement';
+  static const homeScreen_targeted = 'homeScreen.targeted';
+  static const homeScreen = 'homeScreen';
 
 }

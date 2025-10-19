@@ -1,3 +1,10 @@
 {
-  "appName": "8 Stone"
+  "appName": "8 Stone",
+  "buttonTitle": {
+    "start": "Start"
+  },
+  "homeScreen": {
+    "placement": "Placement",
+    "targeted": "Targeted"
+  }
 }

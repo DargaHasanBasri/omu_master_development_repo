@@ -15,6 +15,9 @@ dependencies:
   # Core Dependencies
   cupertino_icons: ^1.0.8
 
+  # State Management
+  flutter_bloc: ^9.1.1
+
   # Localization
   easy_localization: ^3.0.7+1
 

@@ -5,7 +5,14 @@ Future<void> main() async {
   await AppStart.init();
   runApp(
     AppLocalization(
-      child: const MyApp(),
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider<CubitHome>(
+            create: (_) => CubitHome(),
+          ),
+        ],
+        child: const MyApp(),
+      ),
     ),
   );
 }
@@ -17,13 +24,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: '8 Taş',
+      title: AppConstants.appName,
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+      themeMode: ThemeMode.dark,
       home: HomeScreen(),
     );
   }
