@@ -27,6 +27,7 @@ dependencies:
   # code gen
   gen:
     path: module/gen
+  collection: ^1.19.1
 
 dev_dependencies:
   flutter_test:

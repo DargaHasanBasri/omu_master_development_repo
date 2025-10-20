@@ -78,9 +78,70 @@ class HomeScreen extends StatelessWidget {
                     child: Padding(
                       padding: AppPaddings.smallVertical,
                       child: CustomButton(
-                        onTapButton: () {},
+                        onTapButton: () =>
+                            context.read<CubitHome>().solvePuzzle(),
                         title: LocaleKeys.buttonTitle_start.locale,
                       ),
+                    ),
+                  ),
+
+                  if (context.watch<CubitHome>().showIncompleteWarning)
+                    Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: Text(
+                        "⚠️ Lütfen önce tüm taşları yerleştirin.",
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          color: Colors.orangeAccent,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+
+                  Padding(
+                    padding: AppPaddings.smallVertical,
+                    child: Column(
+                      children: [
+                        Text(
+                          context.watch<CubitHome>().solutionFound == null
+                              ? "Henüz çözüm aranmadı."
+                              : context.watch<CubitHome>().solutionFound == true
+                              ? "✅ Çözüm bulundu!"
+                              : "❌ Çözüm bulunamadı.",
+                          style: Theme.of(context).textTheme.bodyLarge
+                              ?.copyWith(
+                                color: ColorName.white,
+                              ),
+                        ),
+                        Text(
+                          "Denetlenen düğüm: ${context.watch<CubitHome>().checkedNodes}",
+                          style: Theme.of(context).textTheme.bodyMedium
+                              ?.copyWith(
+                                color: ColorName.white,
+                              ),
+                        ),
+                        Text(
+                          "Adım sayısı: ${context.watch<CubitHome>().totalSteps}",
+                          style: Theme.of(context).textTheme.bodyMedium
+                              ?.copyWith(
+                                color: ColorName.white,
+                              ),
+                        ),
+
+                        // 👇 Buraya ekliyoruz
+                        if (context.watch<CubitHome>().solutionFound == false &&
+                            context.watch<CubitHome>().checkedNodes == 0)
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: Text(
+                              "⚠️ Bu diziliş matematiksel olarak çözülemez.",
+                              style: Theme.of(context).textTheme.bodyMedium
+                                  ?.copyWith(
+                                    color: Colors.orangeAccent,
+                                  ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                      ],
                     ),
                   ),
                 ],
