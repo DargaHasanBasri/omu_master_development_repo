@@ -1,7 +1,7 @@
 name: eight_stone_problem
 description: "A new Flutter project."
 
-publish_to: 'none' 
+publish_to: 'none'
 
 version: 1.0.0+1
 
@@ -36,8 +36,19 @@ dev_dependencies:
   # Linter
   very_good_analysis: ^9.0.0
 
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/app_icon/app_icon.png"
+  adaptive_icon_background: "#00000000"
+  adaptive_icon_foreground: "assets/app_icon/app_icon.png"
+
+
 flutter:
   uses-material-design: true
 
   assets:
     - assets/langs/
+    - assets/app_icon/

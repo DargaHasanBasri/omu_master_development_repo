@@ -48,7 +48,7 @@ class SolutionStepsText extends StatelessWidget {
         )
         : Center(
             child: Text(
-              "Henüz işlem gerçekleştirilmemiş!",
+              LocaleKeys.homeScreen_noActionMsg.locale,
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                 color: Colors.white,
               ),

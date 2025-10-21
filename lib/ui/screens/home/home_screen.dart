@@ -161,8 +161,18 @@ class _HomeScreenState extends State<HomeScreen> {
                                           numbers:
                                               cubitWatch.currentVisitedNode,
                                           stepNum: cubitWatch.currentStepNum,
-                                          onTapStop: () =>
-                                              cubitRead.stopSolution(),
+                                          onTapStop: () {
+                                            cubitRead.stopSolution();
+                                            _scrollController.animateTo(
+                                              _scrollController
+                                                  .position
+                                                  .minScrollExtent,
+                                              duration: const Duration(
+                                                milliseconds: 500,
+                                              ),
+                                              curve: Curves.easeInOut,
+                                            );
+                                          },
                                         ),
                                 ),
                                 Padding(
