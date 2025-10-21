@@ -5,6 +5,12 @@
   },
   "homeScreen": {
     "placement": "Placement",
-    "targeted": "Targeted"
+    "targeted": "Targeted",
+    "noSolutionFoundYet": "No solution found yet",
+    "solutionFound": "Solution found!",
+    "noSolutionFound": "No solution found!",
+    "supervisedNode": "Supervised Node",
+    "numberOfSteps": "Number of Steps",
+    "message": "This sequence cannot be solved mathematically"
   }
 }

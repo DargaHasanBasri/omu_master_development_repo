@@ -12,3 +12,4 @@ export 'package:flutter_bloc/flutter_bloc.dart';
 export 'package:eight_stone_problem/ui/screens/home/components/target_board_grid.dart';
 export 'package:eight_stone_problem/ui/widgets/custom_flip_transition.dart';
 export 'package:eight_stone_problem/utils/constants/app_constants.dart';
+export 'components/solution_steps_board_grid.dart';

@@ -1,12 +1,16 @@
 import '../export.dart';
 
 class SolutionStepsBoardGrid extends StatelessWidget {
-  final List<int?> numbers;
-
   const SolutionStepsBoardGrid({
     super.key,
     required this.numbers,
+    this.stepNum,
+    required this.onTapStop,
   });
+
+  final List<int?> numbers;
+  final int? stepNum;
+  final VoidCallback onTapStop;
 
   @override
   Widget build(BuildContext context) {
@@ -18,21 +22,24 @@ class SolutionStepsBoardGrid extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               Text(
-                LocaleKeys.homeScreen_targeted.locale,
-                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                  color: ColorName.white,
-                  fontSize: 20,
-                ),
+                "Solution Steps",
+                style:
+                    Theme.of(
+                      context,
+                    ).textTheme.headlineSmall?.copyWith(
+                      color: ColorName.white,
+                      fontSize: 20,
+                    ),
               ),
               Align(
                 alignment: Alignment.centerRight,
                 child: Padding(
                   padding: AppPaddings.xXSmallRight,
                   child: CustomButton(
-                    onTapButton: () {},
+                    onTapButton: () => onTapStop.call(),
                     backgroundColor: Colors.transparent,
                     borderRadius: 24,
-                    icon: Assets.icons.icTarget.image(
+                    icon: Assets.icons.icStop.image(
                       package: AppConstants.packageName,
                       scale: 3,
                     ),
@@ -42,6 +49,7 @@ class SolutionStepsBoardGrid extends StatelessWidget {
             ],
           ),
         ),
+
         Padding(
           padding: AppPaddings.smallVertical,
           child: Column(
@@ -63,6 +71,23 @@ class SolutionStepsBoardGrid extends StatelessWidget {
                 ),
               );
             }),
+          ),
+        ),
+
+        Align(
+          alignment: Alignment.centerRight,
+          child: Padding(
+            padding: AppPaddings.smallRight + AppPaddings.mediumBottom,
+            child: Text(
+              "${stepNum ?? 0}",
+              style:
+                  Theme.of(
+                    context,
+                  ).textTheme.titleSmall?.copyWith(
+                    color: ColorName.white,
+                    fontSize: 16,
+                  ),
+            ),
           ),
         ),
       ],

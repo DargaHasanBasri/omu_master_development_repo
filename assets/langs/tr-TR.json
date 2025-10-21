@@ -5,6 +5,12 @@
   },
   "homeScreen": {
     "placement": "Yerleştirme",
-    "targeted": "Hedeflenen"
+    "targeted": "Hedeflenen",
+    "noSolutionFoundYet": "Henüz çözüm aranmadı",
+    "solutionFound": "Çözüm Bulundu!",
+    "noSolutionFound": "Çözüm Bulunamadı!",
+    "supervisedNode": "Denetlenen düğüm",
+    "numberOfSteps": "Adım sayısı",
+    "message": "Bu diziliş matematiksel olarak çözülemez"
   }
 }

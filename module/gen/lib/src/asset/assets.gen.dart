@@ -21,12 +21,15 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_reset.png
   AssetGenImage get icReset => const AssetGenImage('assets/icons/ic_reset.png');
 
+  /// File path: assets/icons/ic_stop.png
+  AssetGenImage get icStop => const AssetGenImage('assets/icons/ic_stop.png');
+
   /// File path: assets/icons/ic_target.png
   AssetGenImage get icTarget =>
       const AssetGenImage('assets/icons/ic_target.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [icChange, icReset, icTarget];
+  List<AssetGenImage> get values => [icChange, icReset, icStop, icTarget];
 }
 
 class Assets {

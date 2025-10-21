@@ -21,7 +21,7 @@ class NumBox extends StatelessWidget {
         child: Ink(
           padding: AppPaddings.mediumVertical + AppPaddings.largeHorizontal,
           decoration: BoxDecoration(
-            color: ColorName.ebonyClay,
+            color: ColorName.toolbox,
             borderRadius: BorderRadius.circular(12),
           ),
           child: Text(
