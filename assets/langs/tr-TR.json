@@ -11,6 +11,22 @@
     "noSolutionFound": "Çözüm Bulunamadı!",
     "supervisedNode": "Denetlenen düğüm",
     "numberOfSteps": "Adım sayısı",
-    "message": "Bu diziliş matematiksel olarak çözülemez"
+    "message": "Bu diziliş matematiksel olarak çözülemez",
+    "noActionMsg": "Henüz işlem gerçekleştirilmemiş!",
+    "supervisedNodes": "Denetlenen Düğümler",
+    "step": "Adım",
+    "stone": "Taş",
+    "start": "Başlangıç",
+    "target": "Hedef"
+  },
+  "howToPlay": {
+    "title": "How to Play?",
+    "messageOne": "Tahta üzerinde 8 taş ve 1 boş alan vardır.",
+    "messageTwo": "Amaç: taşları hedef dizilime (1'den 8'e kadar sıralı) getirmektir.",
+    "messageThree": "Önce ‘Hedef Tahta’sına göz at, ardından ‘Yerleştirme Tahtası’nı oluştur.",
+    "messageFour": "Tüm taşları yerleştirdikten sonra ‘Başlat’ butonuna bas.",
+    "messageFive": "Algoritma (A* yöntemi) adım adım çözüm yolunu gösterir.",
+    "messageSix": "‘Durdur’ butonuna basarak animasyonu durdurabilirsin.",
+    "messageSeven": "Durdurulduğunda çözüm yolu veya son durum ekranda gösterilir."
   }
 }

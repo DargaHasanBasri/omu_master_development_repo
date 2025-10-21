@@ -13,19 +13,39 @@ class SolutionStepsText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return itemCount != 0
-        ? ListView.builder(
-            padding: AppPaddings.smallAll,
-            physics: BouncingScrollPhysics(),
-            itemCount: itemCount,
-            itemBuilder: (context, index) {
-              return Text(
-                stepsText[index],
-                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: Colors.white,
+        ? Column(
+          children: [
+            Padding(
+              padding: AppPaddings.smallTop,
+              child: Text(
+                LocaleKeys.homeScreen_numberOfSteps.locale,
+                style:
+                Theme.of(
+                  context,
+                ).textTheme.headlineSmall?.copyWith(
+                  color: ColorName.white,
+                  fontSize: 20,
                 ),
-              );
-            },
-          )
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                  padding: AppPaddings.mediumAll,
+                  physics: BouncingScrollPhysics(),
+                  itemCount: itemCount,
+                  itemBuilder: (context, index) {
+                    return Text(
+                      stepsText[index],
+                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    );
+                  },
+                ),
+            ),
+          ],
+        )
         : Center(
             child: Text(
               "Henüz işlem gerçekleştirilmemiş!",

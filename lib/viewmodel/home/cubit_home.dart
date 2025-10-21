@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:eight_stone_problem/export.dart';
 import 'package:eight_stone_problem/services/a_star_solver_services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -187,14 +188,14 @@ class CubitHome extends Cubit<List<int?>> {
           if (toIndex != -1) {
             final fromRow = fromIndex ~/ 3;
             final fromCol = fromIndex % 3;
-
             final toRow = toIndex ~/ 3;
             final toCol = toIndex % 3;
 
             solutionInstructions.add(
-              "${i + 1}. adım: $movedNumber sayısını\n"
-              "[$fromRow, $fromCol] konumundan "
-              "[$toRow, $toCol] konumuna taşı\n",
+              "🔹 ${i + 1}. ${LocaleKeys.homeScreen_step.locale}\n"
+              "🔸 ${LocaleKeys.homeScreen_stone.locale}: `$movedNumber`\n"
+              "📍 ${LocaleKeys.homeScreen_start.locale}: ($fromRow, $fromCol)\n"
+              "🏁 ${LocaleKeys.homeScreen_target.locale}: ($toRow, $toCol)\n",
             );
           }
           break;

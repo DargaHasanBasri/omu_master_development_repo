@@ -11,6 +11,22 @@
     "noSolutionFound": "No solution found!",
     "supervisedNode": "Supervised Node",
     "numberOfSteps": "Number of Steps",
-    "message": "This sequence cannot be solved mathematically"
+    "message": "This sequence cannot be solved mathematically",
+    "noActionMsg": "No action has been taken yet!",
+    "supervisedNodes": "Supervised Nodes",
+    "step": "Step",
+    "stone": "Stone",
+    "start": "Start",
+    "target": "Target"
+  },
+  "howToPlay": {
+    "title": "How to Play?",
+    "messageOne": "There are 8 pieces and 1 empty space on the board.",
+    "messageTwo": "The goal is to bring the stones to the target sequence (1 to 8 in order).",
+    "messageThree": "First, take a look at the ‘Target Board’, then create the ‘Placement Board’.",
+    "messageFour": "After placing all the tiles, press the 'Start' button.",
+    "messageFive": "The algorithm (A* method) shows the solution step by step.",
+    "messageSix": "You can stop the animation by pressing the ‘Stop’ button.",
+    "messageSeven": "When stopped, the solution or the latest status is shown on the screen."
   }
 }

@@ -22,7 +22,7 @@ class SolutionStepsBoardGrid extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               Text(
-                "Solution Steps",
+                LocaleKeys.homeScreen_supervisedNodes.locale,
                 style:
                     Theme.of(
                       context,

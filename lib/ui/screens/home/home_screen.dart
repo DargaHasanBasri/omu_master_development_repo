@@ -1,4 +1,3 @@
-import 'components/solution_steps_text.dart';
 import 'export.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -141,9 +140,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ),
                                   child: cubitWatch.isFlippedSteps
                                       ? Container(
-                                          height: 350,
+                                          height: 355,
                                           child: SolutionStepsText(
-                                            key: ValueKey('SolutionStepsText'),
+                                            key: ValueKey(
+                                              AppConstants
+                                                  .valueKeySolutionStepsText,
+                                            ),
                                             itemCount: cubitWatch
                                                 .solutionInstructions
                                                 .length,
@@ -153,7 +155,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                         )
                                       : SolutionStepsBoardGrid(
                                           key: ValueKey(
-                                            'SolutionStepsBoardGrid',
+                                            AppConstants
+                                                .valueKeySolutionStepsBoardGrid,
                                           ),
                                           numbers:
                                               cubitWatch.currentVisitedNode,
@@ -197,48 +200,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(12.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "🧩 Nasıl Oynanır",
-                                  style: Theme.of(context).textTheme.titleLarge
-                                      ?.copyWith(
-                                        color: ColorName.white,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                ),
-                                const SizedBox(height: 8),
-                                _buildRuleItem(
-                                  "1️⃣",
-                                  "Tahta üzerinde 8 taş ve 1 boş alan vardır.",
-                                ),
-                                _buildRuleItem(
-                                  "2️⃣",
-                                  "Amaç: taşları hedef dizilime (1'den 8'e kadar sıralı) getirmektir.",
-                                ),
-                                _buildRuleItem(
-                                  "3️⃣",
-                                  "Önce ‘Hedef Tahta’sına göz at, ardından ‘Yerleştirme Tahtası’nı oluştur.",
-                                ),
-                                _buildRuleItem(
-                                  "4️⃣",
-                                  "Tüm taşları yerleştirdikten sonra ‘Başlat’ butonuna bas.",
-                                ),
-                                _buildRuleItem(
-                                  "5️⃣",
-                                  "Algoritma (A* yöntemi) adım adım çözüm yolunu gösterir.",
-                                ),
-                                _buildRuleItem(
-                                  "6️⃣",
-                                  "‘Durdur’ butonuna basarak animasyonu durdurabilirsin.",
-                                ),
-                                _buildRuleItem(
-                                  "7️⃣",
-                                  "Durdurulduğunda çözüm yolu veya son durum ekranda gösterilir.",
-                                ),
-                              ],
-                            ),
+                            child: HowToPlayText(),
                           ),
                         ),
                       ),
@@ -249,25 +211,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ),
-      ),
-    );
-  }
-
-  Widget _buildRuleItem(String icon, String text) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(icon, style: const TextStyle(color: Colors.white)),
-          const SizedBox(width: 8),
-          Expanded(
-            child: Text(
-              text,
-              style: const TextStyle(color: Colors.white),
-            ),
-          ),
-        ],
       ),
     );
   }
