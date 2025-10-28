@@ -1,7 +1,7 @@
 Yüksek Lisans Yapay Zeka Dersinin Final-1 Projesi
 
 1. Depoyu klonla veya kaynak kodları indir
-   - git clone https://github.com/DargaHasanBasri/eight_stone_problem
+   - git clone https://github.com/DargaHasanBasri/omu_master_development_repo/edit/main/eight_stone_problem
 2. Gerekli bağımlılıkları yükle
    - flutter pub get
 3. Uygulamayı çalıştır
