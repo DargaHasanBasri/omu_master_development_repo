@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'export.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  await AppStart.init();
+  runApp(AppLocalization(child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -10,17 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: Column(
-        children: [
-          Container(
-            color: ColorName.white,
-          ),
-        ],
-      ),
+      debugShowCheckedModeBanner: false,
+      title: AppConstants.appName,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
+      themeMode: ThemeMode.system,
+      theme: CustomLightTheme().themeData,
+      darkTheme: CustomDarkTheme().themeData,
+      home: WelcomeScreen(),
     );
   }
 }

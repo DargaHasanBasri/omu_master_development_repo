@@ -4,5 +4,13 @@
 
 abstract class  LocaleKeys {
   static const appName = 'appName';
+  static const privacyPolicy = 'privacyPolicy';
+  static const termsConditions = 'termsConditions';
+  static const and = 'and';
+  static const buttonTitle_getStarted = 'buttonTitle.getStarted';
+  static const buttonTitle = 'buttonTitle';
+  static const welcomeScreen_messageTitle = 'welcomeScreen.messageTitle';
+  static const welcomeScreen_messageSubTitle = 'welcomeScreen.messageSubTitle';
+  static const welcomeScreen = 'welcomeScreen';
 
 }

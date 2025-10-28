@@ -1,3 +1,13 @@
 {
-  "appName": "Dataset Review App"
+  "appName": "Dataset Review App",
+  "privacyPolicy": "Privacy Policy",
+  "termsConditions": "Terms & Conditions",
+  "and": "and",
+  "buttonTitle": {
+    "getStarted": "Get Started"
+  },
+  "welcomeScreen": {
+    "messageTitle": "Easily analyze your datasets and visualize the results with charts",
+    "messageSubTitle": "Tap on “Get Started” button to continue further step"
+  }
 }

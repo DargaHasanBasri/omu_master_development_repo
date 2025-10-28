@@ -17,6 +17,12 @@ class ColorName {
   /// Color: #000000
   static const Color black = Color(0xFF000000);
 
+  /// Color: #6350FF
+  static const Color blueLotus = Color(0xFF6350FF);
+
+  /// Color: #F1F1F1
+  static const Color seashell = Color(0xFFF1F1F1);
+
   /// Color: #FFFFFF
   static const Color white = Color(0xFFFFFFFF);
 }
