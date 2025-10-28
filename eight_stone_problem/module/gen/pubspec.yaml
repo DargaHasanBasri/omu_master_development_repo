@@ -11,10 +11,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_svg: ^2.2.0
-  lottie: ^3.3.1
-  envied: ^1.1.1
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -43,9 +39,7 @@ flutter_gen:
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/
     - assets/icons/
-    - assets/lottie/
 
     #fonts:
     #  - family: Raleway
