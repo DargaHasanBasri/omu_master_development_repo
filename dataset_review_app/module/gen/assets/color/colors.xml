@@ -2,4 +2,6 @@
 <resources>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="seashell">#F1F1F1</color>
+    <color name="blueLotus">#6350FF</color>
 </resources>

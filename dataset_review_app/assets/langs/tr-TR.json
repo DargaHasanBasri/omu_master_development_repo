@@ -1,3 +1,13 @@
 {
-  "appName": "Dataset İnceleme Uygulaması"
+  "appName": "Dataset İnceleme Uygulaması",
+  "privacyPolicy": "Gizlilik Politikası",
+  "termsConditions": "Hüküm ve Koşullar",
+  "and": "ve",
+  "buttonTitle": {
+    "getStarted": "Get Started"
+  },
+  "welcomeScreen": {
+    "messageTitle": "Veri setlerinizi kolayca analiz edin ve sonuçları grafiklerle görüntüleyin",
+    "messageSubTitle": "Devam etmek için 'Başlayın' butonuna dokunun"
+  }
 }
