@@ -14,12 +14,61 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
-  /// File path: assets/icons/ic_feedback.png
-  AssetGenImage get icFeedback =>
-      const AssetGenImage('assets/icons/ic_feedback.png');
+  /// File path: assets/icons/ic_arrow_back.png
+  AssetGenImage get icArrowBack =>
+      const AssetGenImage('assets/icons/ic_arrow_back.png');
+
+  /// File path: assets/icons/ic_arrow_back_left.png
+  AssetGenImage get icArrowBackLeft =>
+      const AssetGenImage('assets/icons/ic_arrow_back_left.png');
+
+  /// File path: assets/icons/ic_dataset.png
+  AssetGenImage get icDataset =>
+      const AssetGenImage('assets/icons/ic_dataset.png');
+
+  /// File path: assets/icons/ic_download.png
+  AssetGenImage get icDownload =>
+      const AssetGenImage('assets/icons/ic_download.png');
+
+  /// File path: assets/icons/ic_file.png
+  AssetGenImage get icFile => const AssetGenImage('assets/icons/ic_file.png');
+
+  /// File path: assets/icons/ic_folder.png
+  AssetGenImage get icFolder =>
+      const AssetGenImage('assets/icons/ic_folder.png');
+
+  /// File path: assets/icons/ic_home.png
+  AssetGenImage get icHome => const AssetGenImage('assets/icons/ic_home.png');
+
+  /// File path: assets/icons/ic_search.png
+  AssetGenImage get icSearch =>
+      const AssetGenImage('assets/icons/ic_search.png');
+
+  /// File path: assets/icons/ic_settings.png
+  AssetGenImage get icSettings =>
+      const AssetGenImage('assets/icons/ic_settings.png');
+
+  /// File path: assets/icons/ic_tap.png
+  AssetGenImage get icTap => const AssetGenImage('assets/icons/ic_tap.png');
+
+  /// File path: assets/icons/ic_uploaded.png
+  AssetGenImage get icUploaded =>
+      const AssetGenImage('assets/icons/ic_uploaded.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [icFeedback];
+  List<AssetGenImage> get values => [
+    icArrowBack,
+    icArrowBackLeft,
+    icDataset,
+    icDownload,
+    icFile,
+    icFolder,
+    icHome,
+    icSearch,
+    icSettings,
+    icTap,
+    icUploaded,
+  ];
 }
 
 class $AssetsImagesGen {
