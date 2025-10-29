@@ -23,6 +23,7 @@ dependencies:
 
   # Utilities
   logger: ^2.6.0
+  linear_progress_bar: ^1.2.0
 
   # code gen
   gen:

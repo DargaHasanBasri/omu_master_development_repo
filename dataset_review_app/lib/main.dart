@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: CustomLightTheme().themeData,
       darkTheme: CustomDarkTheme().themeData,
-      home: WelcomeScreen(),
+      home: HomeScreen(),
     );
   }
 }

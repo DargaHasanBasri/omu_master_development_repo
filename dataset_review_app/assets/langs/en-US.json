@@ -9,5 +9,14 @@
   "welcomeScreen": {
     "messageTitle": "Easily analyze your datasets and visualize the results with charts",
     "messageSubTitle": "Tap on “Get Started” button to continue further step"
+  },
+  "homeScreen": {
+    "searchBarHintText": "Search for file...",
+    "gb": "GB",
+    "of": "of",
+    "categories": "Categories",
+    "documents": "Documents",
+    "download": "Download",
+    "uploaded": "Uploaded"
   }
 }
