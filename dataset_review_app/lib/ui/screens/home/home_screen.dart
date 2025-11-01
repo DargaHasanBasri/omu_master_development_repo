@@ -7,13 +7,13 @@ class HomeScreen extends StatelessWidget with CategoryMixin {
   Widget build(BuildContext context) {
     final TextEditingController textEditingController = TextEditingController();
     return Scaffold(
-      body: SingleChildScrollView(
-        child: SafeArea(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Padding(
-                padding: AppPaddings.mediumHorizontal,
+                padding: AppPaddings.mediumAll,
                 child: SearchAndBackButton(
                   textEditingController: textEditingController,
                 ),

@@ -22,7 +22,7 @@ class SearchAndBackButton extends StatelessWidget {
         ),
         Expanded(
           child: Padding(
-            padding: AppPaddings.xXSmallHorizontal + AppPaddings.xSmallLeft,
+            padding: AppPaddings.xSmallLeft,
             child: CustomTextFormField(
               textEditingController: textEditingController,
               backgroundColor: ColorName.lavenderMist,
