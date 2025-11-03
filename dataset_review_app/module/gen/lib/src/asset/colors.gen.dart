@@ -35,6 +35,9 @@ class ColorName {
   /// Color: #F1F1F1
   static const Color seashell = Color(0xFFF1F1F1);
 
+  /// Color: #251856
+  static const Color violent = Color(0xFF251856);
+
   /// Color: #FFFFFF
   static const Color white = Color(0xFFFFFFFF);
 }

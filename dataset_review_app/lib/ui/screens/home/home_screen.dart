@@ -7,13 +7,20 @@ class HomeScreen extends StatelessWidget with CategoryMixin {
   Widget build(BuildContext context) {
     final TextEditingController textEditingController = TextEditingController();
     return Scaffold(
+      extendBody: true,
+      bottomNavigationBar: BlocProvider(
+        create: (_) => BottomNavigationBarCubit(),
+        child: CustomNavigationBar(),
+      ),
       body: SafeArea(
+        bottom: false,
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Padding(
-                padding: AppPaddings.mediumAll,
+                padding:
+                    AppPaddings.mediumHorizontal + AppPaddings.smallVertical,
                 child: SearchAndBackButton(
                   textEditingController: textEditingController,
                 ),
@@ -21,12 +28,11 @@ class HomeScreen extends StatelessWidget with CategoryMixin {
               SizedBox(
                 height: AppConstants.datasetListViewHeight,
                 child: Padding(
-                  padding:
-                      AppPaddings.largeHorizontal + AppPaddings.xXSmallVertical,
+                  padding: AppPaddings.largeHorizontal,
                   child: ClipRRect(
                     borderRadius: BorderRadiusGeometry.circular(20),
                     child: ListView.separated(
-                      padding: AppPaddings.mediumVertical,
+                      padding: AppPaddings.xSmallVertical,
                       physics: BouncingScrollPhysics(),
                       itemBuilder: (context, index) {
                         return DatasetListItem();
@@ -38,15 +44,18 @@ class HomeScreen extends StatelessWidget with CategoryMixin {
                   ),
                 ),
               ),
-              Text(
-                LocaleKeys.homeScreen_categories.locale,
-                style: Theme.of(
-                  context,
-                ).textTheme.headlineSmall?.copyWith(fontSize: 18),
-                textAlign: TextAlign.center,
+              Padding(
+                padding: AppPaddings.xSmallVertical,
+                child: Text(
+                  LocaleKeys.homeScreen_categories.locale,
+                  style: Theme.of(
+                    context,
+                  ).textTheme.headlineSmall?.copyWith(fontSize: 18),
+                  textAlign: TextAlign.center,
+                ),
               ),
               Padding(
-                padding: AppPaddings.largeAll,
+                padding: AppPaddings.largeHorizontal,
                 child: Wrap(
                   spacing: AppConstants.categoryWrapGap,
                   runSpacing: AppConstants.categoryWrapGap,

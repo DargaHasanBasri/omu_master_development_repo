@@ -22,6 +22,10 @@ class $AssetsIconsGen {
   AssetGenImage get icArrowBackLeft =>
       const AssetGenImage('assets/icons/ic_arrow_back_left.png');
 
+  /// File path: assets/icons/ic_bookings.png
+  AssetGenImage get icBookings =>
+      const AssetGenImage('assets/icons/ic_bookings.png');
+
   /// File path: assets/icons/ic_dataset.png
   AssetGenImage get icDataset =>
       const AssetGenImage('assets/icons/ic_dataset.png');
@@ -29,6 +33,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_download.png
   AssetGenImage get icDownload =>
       const AssetGenImage('assets/icons/ic_download.png');
+
+  /// File path: assets/icons/ic_favourites.png
+  AssetGenImage get icFavourites =>
+      const AssetGenImage('assets/icons/ic_favourites.png');
 
   /// File path: assets/icons/ic_file.png
   AssetGenImage get icFile => const AssetGenImage('assets/icons/ic_file.png');
@@ -39,6 +47,10 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/ic_home.png
   AssetGenImage get icHome => const AssetGenImage('assets/icons/ic_home.png');
+
+  /// File path: assets/icons/ic_profile.png
+  AssetGenImage get icProfile =>
+      const AssetGenImage('assets/icons/ic_profile.png');
 
   /// File path: assets/icons/ic_search.png
   AssetGenImage get icSearch =>
@@ -59,11 +71,14 @@ class $AssetsIconsGen {
   List<AssetGenImage> get values => [
     icArrowBack,
     icArrowBackLeft,
+    icBookings,
     icDataset,
     icDownload,
+    icFavourites,
     icFile,
     icFolder,
     icHome,
+    icProfile,
     icSearch,
     icSettings,
     icTap,
