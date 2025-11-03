@@ -10,3 +10,7 @@ export 'package:dataset_review_app/ui/screens/home/mixins/category_mixin.dart';
 export 'package:dataset_review_app/utils/extensions/string_localizations.dart';
 export 'package:gen/generated/locale_keys.g.dart';
 export 'package:dataset_review_app/ui/screens/home/components/custom_category_item.dart';
+export 'package:dataset_review_app/ui/screens/home/components/custom_navigation_bar.dart';
+export 'package:flutter_bloc/flutter_bloc.dart';
+export 'package:dataset_review_app/viewmodel/home/bottom_navigation_bar_cubit.dart';
+export 'package:gen/src/asset/assets.gen.dart';

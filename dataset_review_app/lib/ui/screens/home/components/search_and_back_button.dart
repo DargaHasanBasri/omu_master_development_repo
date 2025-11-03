@@ -16,7 +16,7 @@ class SearchAndBackButton extends StatelessWidget {
             padding: AppPaddings.xSmallAll,
             child: Assets.icons.icArrowBackLeft.image(
               package: AppConstants.packageName,
-              height: 24,
+              height: 20,
             ),
           ),
         ),
