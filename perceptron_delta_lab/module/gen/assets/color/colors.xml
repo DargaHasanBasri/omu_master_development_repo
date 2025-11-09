@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="seashell">#F1F1F1</color>
+    <color name="blueLotus">#6350FF</color>
+    <color name="lavenderMist">#E8E5FF</color>
+    <color name="paleViolet">#C0B8FF</color>
+    <color name="redOrange">#FF3F34</color>
+    <color name="boulder">#757575</color>
+    <color name="violent">#251856</color>
+</resources>
