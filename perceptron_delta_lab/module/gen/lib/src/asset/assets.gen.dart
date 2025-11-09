@@ -14,11 +14,14 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/data_set.png
+  AssetGenImage get dataSet => const AssetGenImage('assets/icons/data_set.png');
+
   /// File path: assets/icons/ic_tap.png
   AssetGenImage get icTap => const AssetGenImage('assets/icons/ic_tap.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [icTap];
+  List<AssetGenImage> get values => [dataSet, icTap];
 }
 
 class Assets {

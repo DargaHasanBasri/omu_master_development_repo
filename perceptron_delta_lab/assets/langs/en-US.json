@@ -1,3 +1,17 @@
 {
-  "appName": "Perceptron Delta Lab"
+  "appName": "Perceptron Delta Lab",
+  "home": {
+    "mainTitle": "Perceptron Delta Lab",
+    "mainSubtitle": "Artificial Intelligence Learning Platform",
+    "centerTitle": "Start Learning",
+    "centerSubtitle": "Explore the fundamentals of machine learning",
+    "labFeatureCard": {
+      "cardFirstTitle": "Create Dataset",
+      "cardFirstSubtitle": "Enter examples in the table; edit properties and labels",
+      "cardSecondTitle": "Training Mode",
+      "cardSecondSubtitle": "Step by step training with Perceptron + Delta rule; error and weight update",
+      "cardThirdTitle": "Theory & Knowledge",
+      "cardThirdSubtitle": "Perceptron and Delta rule: concepts, formulas, activations and summaries"
+    }
+  }
 }

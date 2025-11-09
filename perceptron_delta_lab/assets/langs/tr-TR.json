@@ -1,3 +1,17 @@
 {
-  "appName": "Perceptron Delta Lab"
+  "appName": "Perceptron Delta Lab",
+  "home": {
+    "mainTitle": "Perceptron Delta Lab",
+    "mainSubtitle": "Yapay Zeka Öğrenme Platformu",
+    "centerTitle": "Öğrenmeye Başla",
+    "centerSubtitle": "Makine öğrenmesinin temellerini keşfet",
+    "labFeatureCard": {
+      "cardFirstTitle": "Veri Seti Oluştur",
+      "cardFirstSubtitle": "Tabloda örnekleri gir; özellik ve etiketleri düzenle",
+      "cardSecondTitle": "Eğitim Modu",
+      "cardSecondSubtitle": "Perceptron + Delta kuralı ile adım adım eğitim; hata ve ağırlık güncelleme",
+      "cardThirdTitle": "Teori & Bilgi",
+      "cardThirdSubtitle": "Perceptron ve Delta kuralı: kavramlar, formüller, aktivasyonlar ve özetler"
+    }
+  }
 }
