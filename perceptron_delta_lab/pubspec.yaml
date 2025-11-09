@@ -21,6 +21,9 @@ dependencies:
   # Localization
   easy_localization: ^3.0.7+1
 
+  # Router
+  go_router: ^16.0.0
+
   # Utilities
   logger: ^2.6.0
   linear_progress_bar: ^1.2.0

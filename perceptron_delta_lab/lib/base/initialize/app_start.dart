@@ -7,13 +7,19 @@ class AppStart {
     /// Flutter starts widget binding.
     WidgetsFlutterBinding.ensureInitialized();
 
+    await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+
     /// Sets the system interface style.
     /// Status bar color and screen brightness are specified.
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
-        statusBarIconBrightness: Brightness.dark,
-        statusBarBrightness: Brightness.light,
+        statusBarIconBrightness: Brightness.light,
+        statusBarBrightness: Brightness.dark,
+
+        systemNavigationBarColor: Colors.transparent,
+        systemNavigationBarDividerColor: Colors.transparent,
+        systemNavigationBarIconBrightness: Brightness.light,
       ),
     );
 

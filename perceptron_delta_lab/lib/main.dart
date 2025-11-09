@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:perceptron_delta_lab/routes/app_routes.dart';
 import 'export.dart';
 
 Future<void> main() async {
@@ -11,7 +12,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    final router = AppRoutes.returnRouter();
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: AppConstants.appName,
       localizationsDelegates: context.localizationDelegates,
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: CustomLightTheme().themeData,
       darkTheme: CustomDarkTheme().themeData,
-      home: HomeScreen(),
+      routerConfig: router,
     );
   }
 }
