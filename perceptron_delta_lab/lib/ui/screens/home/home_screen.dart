@@ -26,17 +26,17 @@ class HomeScreen extends StatelessWidget with ScreenTitleMixin {
           child: SafeArea(
             bottom: false,
             child: Padding(
-              padding: AppPaddings.largeAll,
+              padding: AppPaddings.largeHorizontal,
               child: Column(
                 spacing: 8,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  _screenTitleSubtitle(context),
+                  Padding(
+                    padding: AppPaddings.largeTop,
+                    child: _screenTitleSubtitle(context),
+                  ),
                   Expanded(
-                    child: Padding(
-                      padding: AppPaddings.xXLargeTop,
-                      child: _labFeatureMenu(),
-                    ),
+                    child: _labFeatureMenu(),
                   ),
                 ],
               ),
@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget with ScreenTitleMixin {
           ).textTheme.headlineSmall?.copyWith(color: ColorName.white),
         ),
         Padding(
-          padding: AppPaddings.xXLargeTop * 2,
+          padding: AppPaddings.xXLargeTop,
           child: Container(
             child: Column(
               spacing: 10,
@@ -97,8 +97,10 @@ class HomeScreen extends StatelessWidget with ScreenTitleMixin {
 
   Widget _labFeatureMenu() {
     return ClipRRect(
+      clipBehavior: Clip.hardEdge,
       borderRadius: BorderRadius.circular(20),
       child: SingleChildScrollView(
+        padding: AppPaddings.xXLargeVertical,
         physics: BouncingScrollPhysics(),
         child: Column(
           spacing: 16,
@@ -114,7 +116,7 @@ class HomeScreen extends StatelessWidget with ScreenTitleMixin {
               icon: Assets.icons.dataSet,
               title: cardSecondTitle,
               subtitle: cardSecondSubtitle,
-              gradient: LinearGradient(
+              gradient: const LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [ColorName.lightFuchsiaPink, ColorName.beanRed],
@@ -125,7 +127,7 @@ class HomeScreen extends StatelessWidget with ScreenTitleMixin {
               icon: Assets.icons.dataSet,
               title: cardThirdTitle,
               subtitle: cardThirdSubtitle,
-              gradient: LinearGradient(
+              gradient: const LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [ColorName.crystalBlue, ColorName.brightAqua],
