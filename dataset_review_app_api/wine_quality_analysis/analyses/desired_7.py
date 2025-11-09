@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use('Agg')  # ✅ GUI backend'i devre dışı bırakır (Flask/FastAPI uyumlu)
+
 import seaborn as sns
 import matplotlib.pyplot as plt
 import io
@@ -17,7 +20,6 @@ def analyze_desired_7(data):
     numeric_data = data.select_dtypes(include=['float64', 'int64'])
     stats = numeric_data.describe().T
 
-    # Temel istatistikleri JSON formatına dönüştür
     stats_json = {}
     for col in stats.index:
         stats_json[col] = {
@@ -43,24 +45,23 @@ def analyze_desired_7(data):
     corr_json = corr.to_dict()
 
     results.append({
-        "title": "7.1) Öznitelikler arasındaki korelasyon matrisi",
+        "title": "7.1) Öznitelikler Arasındaki Korelasyon Matrisi",
         "type": "table",
         "content": corr_json
     })
 
     # ===============================
-    # 7.3) Korelasyon görselleştirmesi (heatmap)
+    # 7.3) Korelasyon Görselleştirmesi (Heatmap)
     # ===============================
     plt.figure(figsize=(10, 8))
     sns.heatmap(corr, annot=True, fmt=".2f", cmap='coolwarm')
     plt.title("Öznitelikler Arası Korelasyon Matrisi")
 
-    # Görseli base64 string'e çevir
-    img_buf = io.BytesIO()
-    plt.savefig(img_buf, format='png', bbox_inches='tight')
-    plt.close()
-    img_buf.seek(0)
-    img_base64 = base64.b64encode(img_buf.getvalue()).decode('utf-8')
+    buffer = io.BytesIO()
+    plt.savefig(buffer, format='png', bbox_inches='tight')
+    plt.close('all')
+    buffer.seek(0)
+    img_base64 = base64.b64encode(buffer.read()).decode('utf-8')
 
     results.append({
         "title": "7.2) Öznitelikler Arası Korelasyon Matrisi Görselleştirmesi",
