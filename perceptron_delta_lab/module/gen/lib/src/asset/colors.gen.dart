@@ -14,29 +14,44 @@ import 'package:flutter/material.dart';
 class ColorName {
   ColorName._();
 
+  /// Color: #FAFAFA
+  static const Color alabaster = Color(0xFFFAFAFA);
+
+  /// Color: #FEE140
+  static const Color bananaYellow = Color(0xFFFEE140);
+
+  /// Color: #F5576C
+  static const Color beanRed = Color(0xFFF5576C);
+
   /// Color: #000000
   static const Color black = Color(0xFF000000);
 
-  /// Color: #6350FF
-  static const Color blueLotus = Color(0xFF6350FF);
+  /// Color: #00F2FE
+  static const Color brightAqua = Color(0xFF00F2FE);
 
-  /// Color: #757575
-  static const Color boulder = Color(0xFF757575);
+  /// Color: #667EEA
+  static const Color cornflower = Color(0xFF667EEA);
 
-  /// Color: #E8E5FF
-  static const Color lavenderMist = Color(0xFFE8E5FF);
+  /// Color: #4FACFE
+  static const Color crystalBlue = Color(0xFF4FACFE);
 
-  /// Color: #C0B8FF
-  static const Color paleViolet = Color(0xFFC0B8FF);
+  /// Color: #764BA2
+  static const Color darkLavender = Color(0xFF764BA2);
 
-  /// Color: #FF3F34
-  static const Color redOrange = Color(0xFFFF3F34);
+  /// Color: #34C759
+  static const Color darkMint = Color(0xFF34C759);
 
-  /// Color: #F1F1F1
-  static const Color seashell = Color(0xFFF1F1F1);
+  /// Color: #F093FB
+  static const Color lightFuchsiaPink = Color(0xFFF093FB);
 
-  /// Color: #251856
-  static const Color violent = Color(0xFF251856);
+  /// Color: #E5E5EA
+  static const Color mercury = Color(0xFFE5E5EA);
+
+  /// Color: #86868B
+  static const Color monsoon = Color(0xFF86868B);
+
+  /// Color: #FA709A
+  static const Color rosyPink = Color(0xFFFA709A);
 
   /// Color: #FFFFFF
   static const Color white = Color(0xFFFFFFFF);
