@@ -5,6 +5,9 @@ from analyses.desired_4_5_6 import analyze_desired_4_5_6
 from analyses.desired_7 import analyze_desired_7
 from analyses.desired_8 import analyze_desired_8 
 from analyses.desired_9 import analyze_desired_9
+from analyses.desired_10 import analyze_desired_10
+from analyses.desired_11 import analyze_desired_11
+from analyses.desired_12 import analyze_desired_12
 
 app = Flask(__name__)
 
@@ -14,7 +17,7 @@ def index():
 
 
 # ======================================================
-#  desired_1_2_3
+# desired_1_2_3
 # ======================================================
 @app.route('/desired_1_2_3', methods=['POST'])
 def desired_1_2_3():
@@ -33,7 +36,7 @@ def desired_1_2_3():
 
 
 # ======================================================
-#  desired_4_5_6
+# desired_4_5_6
 # ======================================================
 @app.route('/desired_4_5_6', methods=['POST'])
 def desired_4_5_6():
@@ -52,7 +55,7 @@ def desired_4_5_6():
 
 
 # ======================================================
-#  desired_7
+# desired_7
 # ======================================================
 @app.route('/desired_7', methods=['POST'])
 def desired_7():
@@ -71,7 +74,7 @@ def desired_7():
 
 
 # ======================================================
-#  ✅ desired_8 — Box Plot Analizi 
+# desired_8 — Box Plot Analizi 
 # ======================================================
 @app.route('/desired_8', methods=['POST'])
 def desired_8():
@@ -90,7 +93,7 @@ def desired_8():
 
 
 # ======================================================
-#  ✅ desired_9 — Histogram grafikleri Analizi
+# desired_9 — Histogram grafikleri Analizi
 # ======================================================
 
 @app.route('/desired_9', methods=['POST'])
@@ -108,6 +111,67 @@ def desired_9():
         })
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
+# ======================================================
+# desired_10 — Scatter Plot Görselleri
+# ======================================================
+
+@app.route('/desired_10', methods=['POST'])
+def desired_10():
+    if 'file' not in request.files:
+        return jsonify({"error": "Dosya bulunamadı"}), 400
+
+    file = request.files['file']
+    try:
+        df = pd.read_csv(file, sep=';')
+        result = analyze_desired_10(df)
+        return jsonify({
+            "message": "Desired 10 analizi tamamlandı.",
+            "results": result
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
+# ======================================================
+# desired_11 — Scatter Plot Görselleri ve Değerlendirmeler
+# ======================================================
+
+@app.route('/desired_11', methods=['POST'])
+def desired_11():
+    if 'file' not in request.files:
+        return jsonify({"error": "Dosya bulunamadı"}), 400
+
+    file = request.files['file']
+    try:
+        df = pd.read_csv(file, sep=';')
+        result = analyze_desired_11(df)
+        return jsonify({
+            "message": "Desired 11 analizi tamamlandı.",
+            "results": result
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+# ======================================================
+# desired_12 — Violin Plot Görselleri
+# ======================================================
+
+@app.route('/desired_12', methods=['POST'])
+def desired_12():
+    if 'file' not in request.files:
+        return jsonify({"error": "Dosya bulunamadı"}), 400
+
+    file = request.files['file']
+    try:
+        df = pd.read_csv(file, sep=';')
+        result = analyze_desired_12(df)
+        return jsonify({
+            "message": "Desired 12 analizi tamamlandı.",
+            "results": result
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 # ======================================================
 #  Uygulama başlatma

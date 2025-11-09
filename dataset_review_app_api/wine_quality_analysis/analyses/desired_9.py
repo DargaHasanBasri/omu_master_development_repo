@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use('Agg')  # ✅ GUI backend devre dışı, thread-safe
+
 import seaborn as sns
 import matplotlib.pyplot as plt
 import io
@@ -30,7 +33,9 @@ def analyze_desired_9(data):
             "feature": col,
             "image_base64": encoded_image
         })
-        plt.close()
+
+        # 🔒 Bellek temizliği
+        plt.close('all')
 
     # Genel değerlendirme
     general_comment = (

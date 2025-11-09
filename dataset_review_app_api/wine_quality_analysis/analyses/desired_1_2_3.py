@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use('Agg')  # ✅ GUI backend devre dışı (server-safe)
+
 import seaborn as sns
 import matplotlib.pyplot as plt
 import io
@@ -20,7 +23,7 @@ def analyze_desired_1_2_3(data):
     # 4) Sınıf (quality) dağılımı
     class_distribution = data['quality'].value_counts().sort_index().to_dict()
 
-    # 5) Veri kümesi ne zaman ve hangi çalışma kapsamında oluşturulmuştur?
+    # 5) Veri kümesi açıklaması
     dataset_description = (
         "Bu veri seti UCI Machine Learning Repository'den alınmıştır ve "
         "Portekiz'deki Vinho Verde şarapları üzerinde yapılan bir çalışmadan derlenmiştir. "
@@ -32,7 +35,7 @@ def analyze_desired_1_2_3(data):
     classes = sorted(int(x) for x in data['quality'].unique())
     class_info = f"Veri kümesinde {num_classes} farklı kalite sınıfı vardır: {classes}"
 
-    # 7) Veri kümesi dağılımı nasıldır?
+    # 7) Veri kümesi dağılımı
     counts = data['quality'].value_counts().sort_index()
     sorted_counts = counts.sort_values()
     min_classes = sorted_counts.index[:2].tolist()
@@ -44,53 +47,28 @@ def analyze_desired_1_2_3(data):
         f"en çok örnek: {list(zip(max_classes, max_counts))}."
     )
 
-    # Grafik (countplot)
-    plt.figure(figsize=(8,5))
+    # --- Grafik oluşturma ---
+    plt.figure(figsize=(8, 5))
     sns.countplot(x='quality', data=data, palette='viridis')
     plt.title("Şarap Kalite Dağılımı")
     plt.xlabel("Kalite Sınıfı")
     plt.ylabel("Adet")
 
-    img_bytes = io.BytesIO()
-    plt.savefig(img_bytes, format='png', bbox_inches='tight')
-    plt.close()
-    img_bytes.seek(0)
-    img_base64 = base64.b64encode(img_bytes.read()).decode('utf-8')
+    buffer = io.BytesIO()
+    plt.savefig(buffer, format='png', bbox_inches='tight')
+    plt.close('all')  # 🔒 tüm açık figürleri kapat
+    buffer.seek(0)
+    img_base64 = base64.b64encode(buffer.read()).decode('utf-8')
 
-    # 🔹 JSON formatında, başlıklarla birlikte dönelim:
     return {
         "steps": [
-            {
-                "title": "1-> Veri kümesinin ilk 5 satırı:",
-                "content": head_data
-            },
-            {
-                "title": "2-> Veri kümesi bilgisi:",
-                "content": info_dict
-            },
-            {
-                "title": "3-> Eksik veri sayısı:",
-                "content": missing_values
-            },
-            {
-                "title": "4-> Sınıf (quality) dağılımı:",
-                "content": class_distribution
-            },
-            {
-                "title": "1) Veri kümesi ne zaman ve hangi çalışma kapsamında oluşturulmuştur?",
-                "content": dataset_description
-            },
-            {
-                "title": "2) Veri kümesi kaç sınıftan oluşmaktadır?",
-                "content": class_info
-            },
-            {
-                "title": "3) Veri kümesi dağılımı nasıldır?",
-                "content": {
-                    "distribution": counts.to_dict(),
-                    "comment": distribution_comment
-                }
-            }
+            {"title": "1-> Veri kümesinin ilk 5 satırı:", "content": head_data},
+            {"title": "2-> Veri kümesi bilgisi:", "content": info_dict},
+            {"title": "3-> Eksik veri sayısı:", "content": missing_values},
+            {"title": "4-> Sınıf (quality) dağılımı:", "content": class_distribution},
+            {"title": "1) Veri kümesi ne zaman ve hangi çalışma kapsamında oluşturulmuştur?", "content": dataset_description},
+            {"title": "2) Veri kümesi kaç sınıftan oluşmaktadır?", "content": class_info},
+            {"title": "3) Veri kümesi dağılımı nasıldır?", "content": {"distribution": counts.to_dict(), "comment": distribution_comment}},
         ],
         "plot_image_base64": img_base64
     }

@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use('Agg')  # 🔒 GUI backend'i kapatır, thread-safe hale getirir
+
 import seaborn as sns
 import matplotlib.pyplot as plt
 import io
@@ -26,7 +29,7 @@ def analyze_desired_8(data):
         # Görseli base64'e çevir
         buf = io.BytesIO()
         plt.savefig(buf, format='png', bbox_inches='tight')
-        plt.close()
+        plt.close('all')
         buf.seek(0)
         img_base64 = base64.b64encode(buf.getvalue()).decode('utf-8')
 
