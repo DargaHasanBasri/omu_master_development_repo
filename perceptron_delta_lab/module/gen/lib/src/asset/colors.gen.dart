@@ -53,6 +53,12 @@ class ColorName {
   /// Color: #FA709A
   static const Color rosyPink = Color(0xFFFA709A);
 
+  /// Color: #515154
+  static const Color vampireGrey = Color(0xFF515154);
+
   /// Color: #FFFFFF
   static const Color white = Color(0xFFFFFFFF);
+
+  /// Color: #F5F5F7
+  static const Color whiteSmoke = Color(0xFFF5F5F7);
 }

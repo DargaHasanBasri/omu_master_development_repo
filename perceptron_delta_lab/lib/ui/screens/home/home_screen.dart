@@ -1,7 +1,6 @@
-import 'package:perceptron_delta_lab/export.dart';
-import 'components/lab_feature_card.dart';
+import 'export.dart';
 
-class HomeScreen extends StatelessWidget with ScreenTitleMixin {
+class HomeScreen extends StatelessWidget with HomeScreenTitleMixin {
   const HomeScreen({super.key});
 
   @override
@@ -35,9 +34,7 @@ class HomeScreen extends StatelessWidget with ScreenTitleMixin {
                     padding: AppPaddings.largeTop,
                     child: _screenTitleSubtitle(context),
                   ),
-                  Expanded(
-                    child: _labFeatureMenu(),
-                  ),
+                  Expanded(child: _labFeatureMenu(context)),
                 ],
               ),
             ),
@@ -95,7 +92,7 @@ class HomeScreen extends StatelessWidget with ScreenTitleMixin {
     );
   }
 
-  Widget _labFeatureMenu() {
+  Widget _labFeatureMenu(BuildContext context) {
     return ClipRRect(
       clipBehavior: Clip.hardEdge,
       borderRadius: BorderRadius.circular(20),
@@ -123,7 +120,7 @@ class HomeScreen extends StatelessWidget with ScreenTitleMixin {
               ),
             ),
             LabFeatureCard(
-              onTap: () {},
+              onTap: () => context.pushNamed(AppRouteNames.theoryKnowledge),
               icon: Assets.icons.dataSet,
               title: cardThirdTitle,
               subtitle: cardThirdSubtitle,

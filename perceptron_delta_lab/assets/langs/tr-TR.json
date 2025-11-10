@@ -13,5 +13,30 @@
       "cardThirdTitle": "Teori & Bilgi",
       "cardThirdSubtitle": "Perceptron ve Delta kuralı: kavramlar, formüller, aktivasyonlar ve özetler"
     }
+  },
+  "theoryKnowledge": {
+    "mainTitle": "Nasıl Çalışır?",
+    "mathematicalModel": "Matematiksel Model",
+    "neuralNetworkStructure": "Sinir Ağı Yapısı",
+    "inputs": "Girdiler",
+    "addition": "Toplama",
+    "guess": "Tahmin",
+    "target": "Hedef",
+    "mistake": "Hata",
+    "update": "Güncelleme",
+    "activation": "Aktivasyon",
+    "output": "Çıktı",
+    "deltaMsgFirst": "Amaç: Ortalama karesel hatayı (MSE) küçültmek",
+    "deltaMsgSecond": "Not: Delta kuralı doğrusal nöron ve türevlenebilir hata ile kullanılır;",
+    "deltaMsgThird": "Perceptron kuralına göre daha sürekli ve kararlı güncelleme üretir.",
+    "whatDelta": "Delta Nedir?",
+    "deltaExplanation": "Delta kuralı, tek katmanlı bir nöronun ağırlıklarını hatayı en aza indirecek şekilde güncelleyen öğrenme yöntemidir. En küçük kareler yaklaşımının (LMS) çevrim içi/iteratif hali olarak da bilinir ve çıktıyla hedef arasındaki farktan (hata) türetilen gradyanla ağırlıkları adım adım düzeltir.",
+    "perceptronMsgFirst": "Girdi öznitelikleri",
+    "perceptronMsgSecond": "Ağırlıklar",
+    "perceptronMsgThird": "Bias (eşik)",
+    "perceptronMsgFourth": "Aktivasyon (step veya sign)",
+    "perceptronMsgNote": "Not: İkili sınıflandırmada f genellikle basamak (0/1) veya işaret (−1/+1) fonksiyonudur.",
+    "whatPerceptron": "Perceptron Nedir?",
+    "perceptronExplanation": "Perceptron, yapay sinir ağlarının en temel yapı taşıdır. 1958'de Frank Rosenblatt tarafından geliştirilmiş olan bu algoritma, ikili sınıflandırma problemlerini çözmek için kullanılır."
   }
 }

@@ -1,7 +1,7 @@
 import 'package:gen/generated/locale_keys.g.dart';
 import 'package:perceptron_delta_lab/utils/extensions/string_localizations.dart';
 
-mixin ScreenTitleMixin {
+mixin HomeScreenTitleMixin {
   String get mainTitle => LocaleKeys.home_mainTitle.locale;
 
   String get mainSubtitle => LocaleKeys.home_mainSubtitle.locale;

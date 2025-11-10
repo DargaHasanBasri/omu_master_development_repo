@@ -1,5 +1,4 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:perceptron_delta_lab/routes/app_routes.dart';
 import 'export.dart';
 
 Future<void> main() async {

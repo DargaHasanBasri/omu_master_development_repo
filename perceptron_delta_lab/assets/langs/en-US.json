@@ -13,5 +13,30 @@
       "cardThirdTitle": "Theory & Knowledge",
       "cardThirdSubtitle": "Perceptron and Delta rule: concepts, formulas, activations and summaries"
     }
+  },
+  "theoryKnowledge": {
+    "mainTitle": "How Does It Work?",
+    "mathematicalModel": "Mathematical Model",
+    "neuralNetworkStructure": "Neural Network Structure",
+    "inputs": "Inputs",
+    "addition": "Addition",
+    "guess": "Guess",
+    "target": "Target",
+    "mistake": "Mistake",
+    "update": "Update",
+    "activation": "Activation",
+    "output": "Output",
+    "deltaMsgFirst": "Purpose: To reduce the mean square error (MSE)",
+    "deltaMsgSecond": "Note: The delta rule is used with linear neurons and differentiable errors;",
+    "deltaMsgThird": "It produces more continuous and stable updates than the Perceptron rule.",
+    "whatDelta": "What is Delta?",
+    "deltaExplanation": "The delta rule is a learning method that updates the weights of a single-layer neuron to minimize error. Also known as an online/iterative version of the least squares approximation (LMS), it incrementally refines the weights with a gradient derived from the difference (error) between the output and the target.",
+    "perceptronMsgFirst": "Input attributes",
+    "perceptronMsgSecond": "Weights",
+    "perceptronMsgThird": "Bias (threshold)",
+    "perceptronMsgFourth": "Activation (step or sign)",
+    "perceptronMsgNote": "Note: In binary classification, f is usually a digit (0/1) or sign (−1/+1) function.",
+    "whatPerceptron": "What is Perceptron?",
+    "perceptronExplanation": "The perceptron is the most fundamental building block of artificial neural networks. Developed by Frank Rosenblatt in 1958, this algorithm is used to solve binary classification problems."
   }
 }

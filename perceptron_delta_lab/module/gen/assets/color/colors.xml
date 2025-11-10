@@ -2,6 +2,7 @@
 <resources>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="whiteSmoke">#F5F5F7</color>
     <color name="mercury">#E5E5EA</color>
     <color name="monsoon">#86868B</color>
     <color name="alabaster">#FAFAFA</color>
@@ -15,4 +16,5 @@
     <color name="lightFuchsiaPink">#F093FB</color>
     <color name="rosyPink">#FA709A</color>
     <color name="bananaYellow">#FEE140</color>
+    <color name="vampireGrey">#515154</color>
 </resources>
