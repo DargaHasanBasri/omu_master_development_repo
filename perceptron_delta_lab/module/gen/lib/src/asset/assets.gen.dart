@@ -17,11 +17,24 @@ class $AssetsIconsGen {
   /// File path: assets/icons/data_set.png
   AssetGenImage get dataSet => const AssetGenImage('assets/icons/data_set.png');
 
+  /// File path: assets/icons/ic_arrow_back.png
+  AssetGenImage get icArrowBack =>
+      const AssetGenImage('assets/icons/ic_arrow_back.png');
+
+  /// File path: assets/icons/ic_right_arrow_thin.png
+  AssetGenImage get icRightArrowThin =>
+      const AssetGenImage('assets/icons/ic_right_arrow_thin.png');
+
   /// File path: assets/icons/ic_tap.png
   AssetGenImage get icTap => const AssetGenImage('assets/icons/ic_tap.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [dataSet, icTap];
+  List<AssetGenImage> get values => [
+    dataSet,
+    icArrowBack,
+    icRightArrowThin,
+    icTap,
+  ];
 }
 
 class Assets {
