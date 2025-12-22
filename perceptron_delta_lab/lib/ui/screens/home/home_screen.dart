@@ -103,16 +103,16 @@ class HomeScreen extends StatelessWidget with HomeScreenTitleMixin {
           spacing: 16,
           children: [
             LabFeatureCard(
-              onTap: () {},
+              onTap: () => context.pushNamed(AppRouteNames.dataSet),
               icon: Assets.icons.dataSet,
-              title: cardFirstTitle,
+              title: 'Perceptron Lab',
               subtitle: cardFirstSubtitle,
             ),
             LabFeatureCard(
-              onTap: () {},
-              icon: Assets.icons.dataSet,
-              title: cardSecondTitle,
-              subtitle: cardSecondSubtitle,
+              onTap: () => context.pushNamed(AppRouteNames.dataSetDelta),
+              icon: Assets.icons.icDelta,
+              title: 'Delta Lab',
+              subtitle: cardFirstSubtitle,
               gradient: const LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -121,7 +121,7 @@ class HomeScreen extends StatelessWidget with HomeScreenTitleMixin {
             ),
             LabFeatureCard(
               onTap: () => context.pushNamed(AppRouteNames.theoryKnowledge),
-              icon: Assets.icons.dataSet,
+              icon: Assets.icons.icInfo,
               title: cardThirdTitle,
               subtitle: cardThirdSubtitle,
               gradient: const LinearGradient(
