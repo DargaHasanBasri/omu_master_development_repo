@@ -21,6 +21,12 @@ class $AssetsIconsGen {
   AssetGenImage get icArrowBack =>
       const AssetGenImage('assets/icons/ic_arrow_back.png');
 
+  /// File path: assets/icons/ic_delta.png
+  AssetGenImage get icDelta => const AssetGenImage('assets/icons/ic_delta.png');
+
+  /// File path: assets/icons/ic_info.png
+  AssetGenImage get icInfo => const AssetGenImage('assets/icons/ic_info.png');
+
   /// File path: assets/icons/ic_right_arrow_thin.png
   AssetGenImage get icRightArrowThin =>
       const AssetGenImage('assets/icons/ic_right_arrow_thin.png');
@@ -32,6 +38,8 @@ class $AssetsIconsGen {
   List<AssetGenImage> get values => [
     dataSet,
     icArrowBack,
+    icDelta,
+    icInfo,
     icRightArrowThin,
     icTap,
   ];

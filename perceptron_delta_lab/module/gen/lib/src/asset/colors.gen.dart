@@ -50,6 +50,9 @@ class ColorName {
   /// Color: #86868B
   static const Color monsoon = Color(0xFF86868B);
 
+  /// Color: #C3CFE2
+  static const Color periwinkleGrey = Color(0xFFC3CFE2);
+
   /// Color: #FA709A
   static const Color rosyPink = Color(0xFFFA709A);
 
@@ -58,6 +61,9 @@ class ColorName {
 
   /// Color: #FFFFFF
   static const Color white = Color(0xFFFFFFFF);
+
+  /// Color: #F5F7FA
+  static const Color whiteLilac = Color(0xFFF5F7FA);
 
   /// Color: #F5F5F7
   static const Color whiteSmoke = Color(0xFFF5F5F7);
