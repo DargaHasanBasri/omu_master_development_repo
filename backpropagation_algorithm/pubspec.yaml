@@ -1,0 +1,52 @@
+name: backpropagation_algorithm
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.0-290.4.beta
+
+dependencies:
+
+  csv: ^6.0.0
+
+  # Core UI & icons
+  cupertino_icons: ^1.0.8
+
+  dotted_border: ^3.1.0
+
+  equatable: ^2.0.5
+
+  # Flutter SDK (framework)
+  flutter:
+    sdk: flutter
+
+  fl_chart: ^0.69.0
+
+  # State Management
+  flutter_bloc: ^9.1.1
+
+  # Code generation module
+  gen:
+    path: module/gen
+
+  # Router
+  go_router: ^16.0.0
+
+  # Utilities
+  image_picker: ^1.1.2
+  logger: ^2.6.0
+  file_picker: ^10.3.8
+
+dev_dependencies:
+  # Testing
+  flutter_test:
+    sdk: flutter
+
+  # Linter & static analysis
+  very_good_analysis: ^9.0.0
+
+flutter:
+  uses-material-design: true
