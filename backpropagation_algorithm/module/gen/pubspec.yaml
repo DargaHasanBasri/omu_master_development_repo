@@ -1,0 +1,77 @@
+name: gen
+description: "A new Flutter package project."
+version: 0.0.1
+homepage:
+
+environment:
+  # Dart SDK constraint for this package
+  sdk: ^3.10.0-290.4.beta
+
+  # Minimum Flutter version required to use this package
+  flutter: ">=1.17.0"
+
+dependencies:
+  # Compile-time environment/config variables.
+  envied: ^1.1.1
+
+  # Value equality for model and entity classes.
+  equatable: ^2.0.7
+
+  # Flutter framework.
+  flutter:
+    sdk: flutter
+
+  # Render SVG/vector assets as widgets.
+  flutter_svg: ^2.2.0
+
+  # JSON model annotations used by json_serializable.
+  json_annotation: ^4.9.0
+
+  # Lottie animation support for vector animations.
+  lottie: ^3.3.1
+
+dev_dependencies:
+  # Core build system for running code generators.
+  build_runner: ^2.5.4
+
+  # Localization tooling.
+  easy_localization: ^3.0.7+1
+
+  # Code generator for Envied.
+  envied_generator: ^1.1.1
+
+  # Strongly-typed asset access.
+  flutter_gen_runner: ^5.10.0
+
+  # Flutter test framework.
+  flutter_test:
+    sdk: flutter
+
+  # JSON serialization code generator for @JsonSerializable models.
+  json_serializable: ^6.9.5
+
+  # Opinionated lint & static analysis ruleset.
+  very_good_analysis: ^9.0.0
+
+flutter_gen:
+  # Where generated asset references will be written.
+  output: lib/src/asset/
+  # Enable generators for different asset types.
+  integrations:
+    image: true
+    flutter_svg: true
+    rive: true
+    lottie: true
+
+  # Design system color tokens read from XML.
+  colors:
+    inputs:
+      - assets/color/colors.xml
+
+flutter:
+  uses-material-design: true
+  # Asset folders exposed by this package.
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/lottie/

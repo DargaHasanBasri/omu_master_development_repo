@@ -1,0 +1,157 @@
+import 'package:backpropagation_algorithm/export.dart';
+
+class CustomTextFormField extends StatelessWidget {
+  const CustomTextFormField({
+    required this.controller,
+    this.hintTextColor,
+    this.textFieldTitleColor,
+    super.key,
+    TextInputType? inputType,
+    TextInputAction? textInputAction,
+    String? hintText,
+    String? textFieldTitle,
+    String? prefixIconAddress,
+    Color? prefixIconColor,
+    String? suffixIconAddress,
+    double? borderRadius,
+    Color? textFieldBgColor,
+    bool? isAutoTrue,
+    bool? isPrefixIcon,
+    bool? isSuffixIcon,
+    this.onChanged,
+    this.onPressSuffixIcon,
+    this.isRequired = false,
+    this.isHaveObscure = false,
+  })  : inputType = inputType ?? TextInputType.text,
+        textInputAction = textInputAction ?? TextInputAction.next,
+        textFieldBgColor = textFieldBgColor ?? ColorName.alabaster,
+        textFieldTitle = textFieldTitle ?? '',
+        hintText = hintText ?? '',
+        prefixIconAddress = prefixIconAddress ?? 'assets/images/ic_sms.png',
+        prefixIconColor = prefixIconColor ?? ColorName.paleSky,
+        suffixIconAddress = suffixIconAddress ?? 'assets/images/ic_sms.png',
+        borderRadius = borderRadius ?? 16,
+        isAutoTrue = isAutoTrue ?? false,
+        isPrefixIcon = isPrefixIcon ?? false,
+        isSuffixIcon = isSuffixIcon ?? false;
+
+  final TextEditingController controller;
+  final TextInputType inputType;
+  final TextInputAction textInputAction;
+
+  final String hintText;
+  final String textFieldTitle;
+  final String prefixIconAddress;
+  final String suffixIconAddress;
+
+  final ValueChanged<String>? onChanged; // ✅ type-safe
+  final VoidCallback? onPressSuffixIcon;
+
+  final double borderRadius;
+  final Color textFieldBgColor;
+  final Color? hintTextColor;
+  final Color? textFieldTitleColor;
+  final Color? prefixIconColor;
+
+  final bool isAutoTrue;
+  final bool isPrefixIcon;
+  final bool isSuffixIcon;
+  final bool isRequired;
+  final bool isHaveObscure;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        getTextFieldTitle(context),
+        TextFormField(
+          cursorColor: Theme.of(context).colorScheme.secondary,
+          controller: controller,
+          obscureText: isHaveObscure,
+          autofocus: isAutoTrue,
+          keyboardType: inputType,
+          textInputAction: textInputAction,
+          onChanged: (v) => onChanged?.call(v.trim()), // ✅ trim burada
+          style: Theme.of(context).textTheme.titleSmall?.copyWith(
+            decoration: TextDecoration.none,
+            decorationThickness: 0,
+            color: Theme.of(context).colorScheme.secondary,
+          ),
+          decoration: InputDecoration(
+            prefixIcon: isPrefixIcon
+                ? Image.asset(
+              prefixIconAddress,
+              width: AppSizes.largeIconSize,
+              height: AppSizes.largeIconSize,
+              color: prefixIconColor,
+            )
+                : null,
+            suffixIcon: isSuffixIcon
+                ? IconButton(
+              onPressed: () => onPressSuffixIcon?.call(),
+              icon: Image.asset(
+                suffixIconAddress,
+                width: AppSizes.largeIconSize,
+                height: AppSizes.largeIconSize,
+                color: ColorName.paleSky,
+              ),
+            )
+                : null,
+            hintText: hintText,
+            hintStyle: Theme.of(context).textTheme.titleSmall?.copyWith(
+              color: hintTextColor ?? Theme.of(context).colorScheme.onTertiary,
+            ),
+            filled: true,
+            fillColor: textFieldBgColor,
+            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(borderRadius),
+              borderSide: BorderSide(
+                color: Theme.of(context).colorScheme.onPrimaryContainer,
+              ),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(borderRadius),
+              borderSide: BorderSide(
+                color: Theme.of(context).colorScheme.onPrimaryContainer,
+              ),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(borderRadius),
+              borderSide: const BorderSide(color: ColorName.paleSky),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget getTextFieldTitle(BuildContext context) {
+    if (textFieldTitle.isEmpty) return const SizedBox();
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8),
+      child: Row(
+        children: [
+          Text(
+            textFieldTitle,
+            style: Theme.of(context)
+                .textTheme
+                .labelSmall
+                ?.copyWith(color: textFieldTitleColor ?? ColorName.paleSky),
+          ),
+          const SizedBox(width: 6),
+          if (isRequired)
+            const Text(
+              '*',
+              style: TextStyle(
+                color: ColorName.radicalRed,
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+}
