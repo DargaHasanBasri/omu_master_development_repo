@@ -1,0 +1,1 @@
+C:\Users\darga\OneDrive\Belgeler\development_repo\omu_master_development_repo\backpropagation_algorithm\build\app\intermediates\cxx\release\3u6d2x4x\obj\arm64-v8a
