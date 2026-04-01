@@ -5,7 +5,7 @@ final class CustomColorScheme {
 
   static const lightColorScheme = ColorScheme(
     brightness: Brightness.light,
-    primary: ColorName.white,
+    primary: ColorName.desertStorm,
     surfaceTint: Color(0xffFFFFFF),
     onPrimary: Color(0xff699CF4),
     primaryContainer: Color(0xffFFFFFF),

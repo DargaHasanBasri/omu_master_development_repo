@@ -5,7 +5,7 @@ final class CustomDarkTheme implements CustomTheme {
     useMaterial3: true,
     colorScheme: CustomColorScheme.darkColorScheme,
     scaffoldBackgroundColor: CustomColorScheme.darkColorScheme.primary,
-    fontFamily: 'Manrope',
+    fontFamily: 'Lexend',
     appBarTheme: appBarTheme,
     textTheme: textTheme,
   );
