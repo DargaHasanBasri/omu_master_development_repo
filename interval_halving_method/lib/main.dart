@@ -1,8 +1,25 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:interval_halving_method/export.dart';
+import 'package:interval_halving_method/routes/app_routes.dart';
+import 'package:interval_halving_method/view_model/home/function_cubit.dart';
+import 'package:interval_halving_method/view_model/home/objective_cubit.dart';
+import 'package:interval_halving_method/view_model/optimization_cubit.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  await AppStart.init();
+  runApp(
+    AppLocalization(
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(create: (context) => ObjectiveCubit()),
+          BlocProvider(create: (context) => FunctionCubit()),
+          BlocProvider(create: (context) => OptimizationCubit()),
+        ],
+        child: const MyApp(),
+      ),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -10,7 +27,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: AppConstants.appName,
       localizationsDelegates: context.localizationDelegates,
@@ -18,7 +35,16 @@ class MyApp extends StatelessWidget {
       locale: context.locale,
       theme: CustomLightTheme().themeData,
       darkTheme: CustomDarkTheme().themeData,
-      home: Column(),
+      builder: (context, child) {
+        return GestureDetector(
+          onTap: () {
+            FocusManager.instance.primaryFocus?.unfocus();
+          },
+          behavior: HitTestBehavior.opaque,
+          child: child,
+        );
+      },
+      routerConfig: AppRoutes.router,
     );
   }
 }
